@@ -15,7 +15,7 @@ contract nfts is ERC721URIStorage {
     }
 
     function makeAnEpicNFT () public {
-        unit256 newItemId = _tokenIds.current();
+        uint256 newItemId = _tokenIds.current();
 
         _safeMint(msg.sender, newItemId);
 
