@@ -1,0 +1,19 @@
+node_modules
+.encryptedKey.json
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+#vscode
+.vscode
+
+#hardhat files
+cache
+artifacts
+.DS_Store
+gas-report.txt
+deployments
+
+.notes.md
