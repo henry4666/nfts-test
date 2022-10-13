@@ -6,9 +6,11 @@ const main = async () => {
 
     let txt = await nftContract.makeAnEpicNFT()
     await txt.wait()
+    console.log("Minted NFT #%s", newItemId)
 
     txt = await nftContract.makeAnEpicNFT()
-    await txt.wait()       
+    await txt.wait()
+    console.log("Minted NFT #%s", newItemId)
 };
 
 const runMain = async () => {
