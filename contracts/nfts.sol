@@ -10,19 +10,15 @@ contract nfts is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor () ERC721 ("RandoTestNFT","RDTEST") {
+    constructor() ERC721 ("RandoTestNFT","RDTEST") {
         console.log("nice contract");
     }
 
-    function makeAnEpicNFT () public {
+    function makeAnEpicNFT() public {
         uint256 newItemId = _tokenIds.current();
-
         _safeMint(msg.sender, newItemId);
-
         _setTokenURI(newItemId, "https://jsonkeeper.com/b/5F1W");
-
         console.log("NFT ID: %s minted to %s", newItemId, msg.sender);
-
         _tokenIds.increment();
     }
 
